@@ -2,13 +2,17 @@
   "manifest_version": 3,
   "name": "Regex Matcher Extension",
   "version": "1.0",
-  "description": "Matches regex patterns and adds information from local mock API",
+  "description": "Matches regex patterns and adds information from backend",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "host_permissions": [
     "http://localhost:5001/*"
   ],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
